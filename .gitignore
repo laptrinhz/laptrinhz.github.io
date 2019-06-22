@@ -1,3 +1,6 @@
+.idea/
+.vsode/
+
 _site
 .sass-cache
 .jekyll-metadata
