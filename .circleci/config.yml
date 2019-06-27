@@ -12,7 +12,10 @@ jobs:
           command: 'npm install firebase-tools'
       - run:
           name: 'isntall project 1'
-          command: 'bundle install'
+          command: 'gem install jekyll bundler'
+      - run:
+          name: 'isntall project 2'
+          command: 'gem install'
       - run:
           name: 'build project 1'
           command: 'bundle exec jekyll build --verbose'
