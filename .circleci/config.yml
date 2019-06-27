@@ -9,7 +9,13 @@ jobs:
       - checkout
       - run:
           name: 'Setting firebase tools'
+          command: 'gem install jekyll bundler'
+      - run:
+          name: 'Setting firebase tools'
           command: 'npm install firebase-tools'
+      - run:
+          name: 'isntall project 1'
+          command: 'bundle install'
       - run:
           name: 'build project 1'
           command: 'bundle exec jekyll build --verbose'
