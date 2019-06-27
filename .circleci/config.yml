@@ -8,9 +8,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: 'Setting firebase tools'
-          command: 'npm install firebase-tools'
-      - run:
           name: 'isntall project 1'
           command: 'gem install jekyll bundler'
       - run:
@@ -19,6 +16,9 @@ jobs:
       - run:
           name: 'build project 1'
           command: 'bundle exec jekyll build --verbose'
+      - run:
+          name: 'Setting firebase tools'
+          command: 'npm install --save-dev firebase-tools'
       - run:
           name: 'Deploy'
           command: 'firebase deploy --token=$FIREBASE_TOKEN --non-interactive'
