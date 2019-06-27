@@ -8,6 +8,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: 'Setup ruby gem'
+          command: 'sudo apt-get install ruby-full build-essential zlib1g-dev'
+      - run:
           name: 'Setting firebase tools'
           command: 'gem install jekyll bundler'
       - run:
