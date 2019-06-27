@@ -18,7 +18,7 @@ jobs:
           command: 'bundle exec jekyll build --verbose'
       - run:
           name: 'Setting firebase tools'
-          command: 'npm install --save-dev firebase-tools'
+          command: 'npm install firebase-tools'
       - run:
           name: 'Deploy'
-          command: 'firebase deploy --token=$FIREBASE_TOKEN --non-interactive'
+          command: './node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --non-interactive'
